@@ -4,7 +4,7 @@ fun main() {
     val balance: Double = 1234000.00
     val glutenOrNotGluten: Boolean = false
     var gluten: String
-    if(glutenOrNotGluten == true)
+    if(glutenOrNotGluten)
         gluten = "ем глютен"
     else
         gluten = "не ем глютен"
