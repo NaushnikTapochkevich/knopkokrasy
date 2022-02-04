@@ -1,6 +1,6 @@
 fun main() {
     print("Name entry: ")
-    var name = readLine()
+    val name = readLine()
 
     println("Hello world, from $name")
 }
