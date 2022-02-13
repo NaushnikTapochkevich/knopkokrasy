@@ -7,7 +7,7 @@ fun main(){
     println(factorial(5)) //факториал
     println(factorialTwo(3))
     println(addTwo(4)) //метод addTwo
-  //  println(sumOfDigits(234)) //сумма цифр в числе
+    println(sumOfDigits(23214)) //сумма цифр в числе
     sumOfNumbers() //вывод суммы всех чисел до 1000
     println(summ()) //сумма до 200
 
@@ -25,18 +25,14 @@ fun cylinderArea(cylinderHeight: Double= 20.0, cylinderRadius: Double=20.0){
 }
 
 
-fun discriminant(a: Double, b: Double, c: Double): Double{
-    return sqrt(b) - 4 * a * c
-}
+fun discriminant(a: Double, b: Double, c: Double): Double = sqrt(b) - 4 * a * c
 
-fun quadraticEquationRoot(a: Double, b: Double, c: Double): Double {
-    val squareRoot: Double = (-b + sqrt(discriminant(a, b, c))) / (2 * a) //для нахождения квадратного корня
-    return squareRoot
-} // no ok
+fun quadraticEquationRoot(a: Double, b: Double, c: Double): Double = (-b + sqrt(discriminant(a, b, c))) / (2 * a) //для нахождения квадратного корня
 
 
 
-fun factorial(n: Int): Int = if (n < 2) 1 else n * factorial(n - 1) //ok
+
+fun factorial(n: Int): Int = if (n < 2) 1 else n * factorial(n - 1)
 
 fun factorialTwo(n: Int): Int { //второй вариант вычисл факторияала
     var result = 1
@@ -49,34 +45,37 @@ fun factorialTwo(n: Int): Int { //второй вариант вычисл фа�
 fun addTwo(number: Int?): Int{
     val result: Int = number ?:0 //до меня еще не дошло как правильно сократить
     return result+2
-} // ok
+}
 
 fun summ(): Int{
-    var count = 0
+    var num = 1
     var sum = 1
-    while (sum<200) {
-        sum += sum
+    var count = 0
+    while (sum < 200) {
+        num++
+        sum +=num
         count++
     }
     return count
-} // ok
+}
 
 fun sumOfNumbers(){
     val num = 1..1000
-    var m = 1
+    var count = 1
     var sum = 0
     for (i in num) {
-        sum += m
-        m++
+        sum += count
+        count++
     }
     println("Sum = $sum")
 }
 
-/*fun sumOfDigits(n: Int): Int{
+fun sumOfDigits(number: Int): Int{
     var sum = 0
-    while (n>=0){
+    var n = number
+    while (n!=0){
         sum += n%10
-        n /= 10 // у меня был такой варинат, но нельзя изменить значение параметра функции
+        n /= 10
     }
     return sum
-}*/
+}
