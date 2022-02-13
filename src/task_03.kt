@@ -48,15 +48,13 @@ fun addTwo(number: Int?): Int{
 }
 
 fun summ(): Int{
-    var num = 1
-    var sum = 1
-    var count = 0
+    var num = 0
+    var sum = 0
     while (sum < 200) {
         num++
         sum +=num
-        count++
     }
-    return count
+    return num
 }
 
 fun sumOfNumbers(){
