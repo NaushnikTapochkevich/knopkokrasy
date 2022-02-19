@@ -6,18 +6,16 @@ import kotlin.random.Random
 fun main(){
     val list = Array(20) {0}
     var num = 0
-    var sum = 0
     while (num < list.size) {
         list[num] = Random.nextInt(20)
         print(list[num])
         print(" ")
         num++
-        sum += num
     }//data
 
     bubbleSort(list)//task 1
 
-    minMaxMean(list, sum) //task 2
+    minMaxMean(list) //task 2
 }
 
 fun bubbleSort(list: Array<Int>){ //пузырковый метод
@@ -38,12 +36,13 @@ fun bubbleSort(list: Array<Int>){ //пузырковый метод
     println()
 }
 
-fun minMaxMean(array: Array<Int>, sum: Int){ //максимуум минимум средн
+fun minMaxMean(array: Array<Int>){ //максимуум минимум средн
 
     var min: Int =  array[0]
     var max = 0
     var total = 0
     var mean = 0
+    var sum = 0
     for (element in array) {
         val item = element
         total += item
@@ -53,6 +52,7 @@ fun minMaxMean(array: Array<Int>, sum: Int){ //максимуум минимум
         if (item > max) {
             max = item
         }
+        sum +=element
     }
     mean = sum/array.size
 
