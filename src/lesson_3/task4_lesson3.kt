@@ -40,17 +40,14 @@ fun minMaxMean(array: Array<Int>){ //максимуум минимум сред�
 
     var min: Int =  array[0]
     var max: Int = array[0]
-    var total = 0
-    var mean = 0
+    var mean: Int
     var sum = 0
     for (element in array) {
-        val item = element
-        total += item
-        if (item < min) {
-            min = item
+        if (element < min) {
+            min = element
         }
-        if (item > max) {
-            max = item
+        if (element > max) {
+            max = element
         }
         sum +=element
     }
