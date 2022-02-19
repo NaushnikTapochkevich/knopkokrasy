@@ -12,12 +12,12 @@ fun main(){
         print(" ")
         num++
     }
-    println(bubbleSort(list))
+    bubbleSort(list)
 
     minMaxMean() //task 2
 }
 
-fun bubbleSort(list: Array<Int>): Array<Int>{ //пузырковый метод
+fun bubbleSort(list: Array<Int>){ //пузырковый метод
     var swop = true
     while (swop){
         swop = false
@@ -30,7 +30,9 @@ fun bubbleSort(list: Array<Int>): Array<Int>{ //пузырковый метод
             }
         }
     }
-    return list
+    println()
+    for (n in list) print(" $n")
+    println()
 }
 
 fun minMaxMean(){ //максимуум минимум средн
