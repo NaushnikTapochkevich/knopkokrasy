@@ -7,7 +7,7 @@ fun main(){
     val list = Array(20) {0}
     var num = 0
     while (num < list.size) {
-        list[num] = Random.nextInt(20)
+        list[num] = Random.nextInt(-10, 10)
         print(list[num])
         print(" ")
         num++
@@ -39,7 +39,7 @@ fun bubbleSort(list: Array<Int>){ //пузырковый метод
 fun minMaxMean(array: Array<Int>){ //максимуум минимум средн
 
     var min: Int =  array[0]
-    var max = 0
+    var max: Int = array[0]
     var total = 0
     var mean = 0
     var sum = 0
