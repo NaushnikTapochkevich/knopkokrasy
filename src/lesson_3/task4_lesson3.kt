@@ -4,26 +4,33 @@ import kotlin.random.Random
 
 
 fun main(){
-    val list = bubbleSort(intArrayOf(0,9,8,7,8,2,1,5))
-    for (n in list) println(n) //task 1
+    val list = Array(20) {0}
+    var num = 0
+    while (num < list.size) {
+        list[num] = Random.nextInt(20)
+        print(list[num])
+        print(" ")
+        num++
+    }
+    println(bubbleSort(list))
 
     minMaxMean() //task 2
 }
 
-fun bubbleSort(array: IntArray): IntArray{ //пузырковый метод
+fun bubbleSort(list: Array<Int>): Array<Int>{ //пузырковый метод
     var swop = true
     while (swop){
         swop = false
-        for (i in 0 until array.size-1){
-            if(array[i] > array[i+1]){
-                val n = array[i]
-                array[i] = array[i+1]
-                array[i+1]=n
+        for (i in 0 until list.size-1){
+            if(list[i] > list[i+1]){
+                val n = list[i]
+                list[i] = list[i+1]
+                list[i+1]=n
                 swop = true
             }
         }
     }
-    return array
+    return list
 }
 
 fun minMaxMean(){ //максимуум минимум средн
