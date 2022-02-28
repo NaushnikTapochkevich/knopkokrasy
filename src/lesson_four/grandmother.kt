@@ -14,11 +14,11 @@ open class grandmother {
         println("Бабушка ест")
     }
 
-    open fun sleep() {
+    private fun sleep() {
         println("Бабушка спит")
     }
 
-    protected fun dance() {
+    private fun dance() {
         println("Бабушка танцует")
     }
 }
