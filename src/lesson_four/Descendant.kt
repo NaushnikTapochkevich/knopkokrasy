@@ -1,6 +1,6 @@
 package lesson_four
 
-class descendant : mother() {
+class Descendant : Mother() {
     override val image = ".jpg"
     override val name = "Bell"
     override val likeFood = "мясо"

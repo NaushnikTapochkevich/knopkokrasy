@@ -1,9 +1,9 @@
 package lesson_four
 
 fun main(){
-    val anna = grandmother()
-    val melissa = mother()
-    val bell = descendant()
+    val anna = Grandmother()
+    val melissa = Mother()
+    val bell = Descendant()
 
     println(anna.name)
     println(melissa.name)

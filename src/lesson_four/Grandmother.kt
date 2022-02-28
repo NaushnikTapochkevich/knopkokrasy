@@ -1,6 +1,6 @@
 package lesson_four
 
-open class grandmother {
+open class Grandmother {
     open val image = ""
     open val name = "Anna"
     open val likeFood = "shawarma"

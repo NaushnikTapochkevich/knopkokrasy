@@ -1,7 +1,7 @@
 package lesson_four
 
 
-open class mother(): grandmother(){
+open class Mother(): Grandmother(){
     override val image = ".jpg"
     override val name = "Melissa"
     override val likeFood = "banana"
