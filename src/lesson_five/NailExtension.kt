@@ -1,34 +1,34 @@
 package lesson_five
 
-class NailExtension : BeautyService {
-    fun acrylic(color: String = "colorless", design: String = "no design", length: String, shape: String){
-        println("Акрилловое наращивание, цвета $color с дизайном $design, длиной $length и формой $shape")
-    }
-    fun gel(color: String = "colorless", design: String = "no design", length: Int, shape: String){
-        println("Наращивание каким-то гелем, цвета $color с дизайном $design, длиной $length и формой $shape")
-    }
-    fun paperBase(length: String){
-        val lengthShort = "SMALL"
-        val lengthLong = "MEDIUM"
-        val lengthVeryLong = "LARGE"
-        if (length == lengthShort){
+import java.time.LocalDate
+
+abstract class NailExtension : Nails() {
+
+    abstract fun gelOrAcrylic(color: String = "colorless", design: Boolean, length: LengthNails, shape: FormsNails)
+
+    protected fun paperBase(length: PaperBase) {
+        if (length == PaperBase.SMALL) {
             println("Бумажная основа должна быть маленькая")
-        }
-        else if (length == lengthLong){
+        } else if (length == PaperBase.MEDIUM) {
             println("Бумажная основа должна быть средняя")
-        }
-        else if (length == lengthVeryLong){
+        } else if (length == PaperBase.LARGE) {
             println("Бумажная основа должна быть большая")
         }
     }
-    override fun register(name: String, date: Int) {
-        super.register(name, date)
+
+    override fun register(name: String, date: LocalDate) {
+        println("регистрация $name на дату $date")
     }
 }
 
-enum class FormsNails{
+enum class FormsNails {
     OVAL, SQUARE, ROUNDEDSQUARE, ALMOND, STILLETON
 }
-enum class lengthNails{
+
+enum class LengthNails {
     SHORT, LONG, VERYLONG
+}
+
+enum class PaperBase {
+    SMALL, MEDIUM, LARGE
 }

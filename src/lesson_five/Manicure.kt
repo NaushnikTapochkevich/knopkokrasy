@@ -1,15 +1,14 @@
 package lesson_five
 
-class Manicure: BeautyService {
-    fun trimTheCuticle(type: String){
-        if (type == "hardware"){
-            println("аппаратный")
-        }
-        else if (type == " trim")
-            println("обрезной")
-        }
+import java.time.LocalDate
 
-    override fun register(name: String, date: Int) {
-        super.register(name, date)
+class Manicure : Nails() {
+
+    override fun register(name: String, date: LocalDate) {
+        println("регистрация $name на дату $date")
+    }
+
+    fun colorNails(color: String = "без покраски") { //по умолчанию не красят
+        println("Цвет ногтей $color")
     }
 }

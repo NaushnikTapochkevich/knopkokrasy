@@ -1,10 +1,13 @@
 package lesson_five
 
-class EyebrowCorrection: BeautyService {
-    override fun register(name: String, date: Int) {
-        super.register(name, date)
+import java.time.LocalDate
+
+class EyebrowCorrection : BeautyService {
+    override fun register(name: String, date: LocalDate) {
+        println("регистрация $name на дату $date")
     }
-    fun eyebrowCorrection(){
+
+    fun eyebrowCorrection() {
         println("выщипываю брови")
     }
 }
