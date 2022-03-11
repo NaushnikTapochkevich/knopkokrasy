@@ -1,16 +1,16 @@
 package lesson_five
 
-import java.time.LocalDate
+import java.util.*
 
 fun main(){
     val anna: Acrylic = Acrylic() //клиент Анна выбрала наращивание акрил
-    val dateAnna = LocalDate.parse("2022-11-21")
+    val dateAnna = Calendar.getInstance().time
     anna.register("Anna", dateAnna)
-    anna.gelOrAcrylic("red", false, LengthNails.LONG, FormsNails.ALMOND)
+    anna.extension("red", false, LengthNails.LONG, FormsNails.ALMOND)
     anna.trimTheCuticle(Nails.Cuticle.TRIM)
 
     val mary: Manicure = Manicure() //клиент Мэри выбрала маникюр с покраской в красный цвет
-    val dateMary = LocalDate.parse("2022-11-30")
+    val dateMary = Calendar.getInstance().time
     mary.register("Mary", dateMary)
     mary.colorNails("red")
     mary.trimTheCuticle(Nails.Cuticle.HARDWARE)

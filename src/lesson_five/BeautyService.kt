@@ -1,7 +1,7 @@
 package lesson_five
 
-import java.time.LocalDate
+import java.util.*
 
 interface BeautyService {
-    fun register(name: String, date: LocalDate)
+    fun register(name: String, date: Date)
 }

@@ -1,10 +1,11 @@
 package lesson_five
 
-import java.time.LocalDate
+import java.util.*
 
 class Manicure : Nails() {
+    var colorNails = "без покраски"//ранить полем имеется ввиду вот так?
 
-    override fun register(name: String, date: LocalDate) {
+    override fun register(name: String, date: Date) {
         println("регистрация $name на дату $date")
     }
 

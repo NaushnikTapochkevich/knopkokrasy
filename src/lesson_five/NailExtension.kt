@@ -1,10 +1,10 @@
 package lesson_five
 
-import java.time.LocalDate
+import java.util.*
 
 abstract class NailExtension : Nails() {
 
-    abstract fun gelOrAcrylic(color: String = "colorless", design: Boolean, length: LengthNails, shape: FormsNails)
+    abstract fun extension(color: String = "colorless", design: Boolean, length: LengthNails, shape: FormsNails)
 
     protected fun paperBase(length: PaperBase) {
         if (length == PaperBase.SMALL) {
@@ -16,7 +16,7 @@ abstract class NailExtension : Nails() {
         }
     }
 
-    override fun register(name: String, date: LocalDate) {
+    override fun register(name: String, date: Date) {
         println("регистрация $name на дату $date")
     }
 }

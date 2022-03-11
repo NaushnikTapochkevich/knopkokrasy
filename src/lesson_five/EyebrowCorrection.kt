@@ -1,9 +1,9 @@
 package lesson_five
 
-import java.time.LocalDate
+import java.util.*
 
 class EyebrowCorrection : BeautyService {
-    override fun register(name: String, date: LocalDate) {
+    override fun register(name: String, date: Date) {
         println("регистрация $name на дату $date")
     }
 
