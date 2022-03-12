@@ -15,6 +15,7 @@ abstract class NailExtension : Nails() {
             println("Бумажная основа должна быть большая")
         }
     }
+    abstract fun paper()
 
     override fun register(name: String, date: Date) {
         println("регистрация $name на дату $date")

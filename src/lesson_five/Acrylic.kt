@@ -5,5 +5,7 @@ class Acrylic : NailExtension() {
         println("Акрилловое наращивание, цвета $color с дизайном $design, длиной $length и формой $shape")
     }
 
-    private val paper = paperBase(PaperBase.SMALL)//здесь маникюрщик, измерив размер пальца клиента, укажет какой нужно
+    override fun paper() {
+        paperBase(PaperBase.MEDIUM)
+    }
 }
