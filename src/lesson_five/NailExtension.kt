@@ -15,7 +15,20 @@ abstract class NailExtension : Nails() {
             println("Бумажная основа должна быть большая")
         }
     }
+
     abstract fun paper()
+
+    fun doManicure(
+        color: String,
+        design: Boolean,
+        length: LengthNails,
+        form: FormsNails,
+        cuticle: Cuticle
+    ) {
+        extension(color, design, length, form)
+        trimTheCuticle(cuticle)
+        colorNails = color
+    }
 
     override fun register(name: String, date: Date) {
         println("регистрация $name на дату $date")

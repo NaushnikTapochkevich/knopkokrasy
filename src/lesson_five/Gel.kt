@@ -10,9 +10,4 @@ class Gel : NailExtension() {
     override fun paper() {
         paperBase(PaperBase.SMALL)
     }
-
-    override fun doManicure() {
-        extension("red", false, LengthNails.LONG, FormsNails.ALMOND)
-        trimTheCuticle(Cuticle.HARDWARE)
-    }
 }

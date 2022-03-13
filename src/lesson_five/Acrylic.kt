@@ -10,9 +10,4 @@ class Acrylic : NailExtension() {
     override fun paper() {
         paperBase(PaperBase.MEDIUM)
     }
-
-    override fun doManicure() {
-        extension("red", false, LengthNails.LONG, FormsNails.ALMOND)
-        trimTheCuticle(Cuticle.TRIM)
-    }
 }

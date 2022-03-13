@@ -3,6 +3,8 @@ package lesson_five
 import java.util.*
 
 abstract class Nails : BeautyService {
+    var colorNails = "без покраски"
+
     fun trimTheCuticle(type: Cuticle) {
         when (type) {
             Cuticle.HARDWARE -> println("аппаратный")
@@ -14,8 +16,6 @@ abstract class Nails : BeautyService {
         val date = Calendar.getInstance().time
         register(name, date)
     }
-
-    abstract fun doManicure()
 }
 
 enum class Cuticle {
