@@ -12,4 +12,9 @@ class Manicure : Nails() {
     fun colorNails(color: String = "без покраски") { //по умолчанию не красят
         println("Цвет ногтей $color")
     }
+
+    override fun doManicure() {
+        trimTheCuticle(Cuticle.HARDWARE)
+        colorNails("red")
+    }
 }
